@@ -19,7 +19,7 @@ function IsPrime($number) {
     }
     
     // if not divisible by first primes, try brute force division
-    for ($n = 997; $n < ceil($number/2); $n++) {
+    for ($n = end($firstprimes); $n < ceil($number/2); $n++) {
         if ($number % $n == 0) {
             return false;
         }
